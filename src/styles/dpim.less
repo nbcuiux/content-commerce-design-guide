@@ -1,0 +1,149 @@
+@import 'variables.less';
+
+.ux-page {
+  background: #fefefe;
+  position: relative;
+  margin: 0;
+  padding: 0
+}
+
+.bg {
+  position: absolute;
+  z-index: 0;
+  font-family: 'Titillium Web', sans-serif;
+  color: #ffffff;
+  background-color: transparent;
+  font-weight: 900;
+  font-size: 50vh;
+  white-space: nowrap;
+  left: 50%;
+  top: 0;
+  //overflow-x: hidden;
+  line-height: 1.0;
+  transform: translate(-50%, 0);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-shadow: 0 5vh 10vh  rgba(0,0,0, 0.05), 0 0 20vh  rgba(0,0,0, 0.03);
+
+  animation: fadeIn 0.8s ease-in-out;
+
+  .ux-page--index & {
+    position: fixed;
+    z-index: 0;
+    white-space: normal;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 55vh;
+    line-height: 0.75;
+  }
+}
+
+.content {
+  background-color: transparent;
+  position: relative;
+  margin: 0;
+  padding-top: 22vh;
+  //overflow-x: hidden;
+
+  &.intro-page {
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+  }
+}
+.h1 {
+  position: absolute;
+  z-index: 1;
+  text-align: left;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  padding: 19px 70px;
+  line-height: 1;
+  margin: 0;
+  font-size: 24px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 200;
+
+  animation: fadeIn 0.5s ease-in-out 0.3s;
+  animation-fill-mode: backwards;
+}
+
+.links {
+  position: relative;
+  margin: 150px auto 0 auto;
+  max-width: 800px;
+  list-style: none;
+
+  transform-origin: left top;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.link {
+  position: relative;
+  width: 33.333333%;
+  min-width: 250px;
+  padding: 0 50px 50px 0;
+  box-sizing: border-box;
+
+  animation: linkSlideIn 0.7s ease-in-out;
+  animation-fill-mode: backwards;
+  .link-animation-delay(6);
+}
+.link-title {
+  position: relative;
+  text-decoration: none;
+  color: @color-accent;
+  font-size: 14px;
+  font-weight: 700;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    //opacity: 0.5;
+
+    background-color: @color-accent;
+    transition: 0.3s ease-out;
+  }
+  &::before {
+    left: 50%;
+  }
+  &::after {
+    right: 50%;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    width: 50%;
+  }
+  &.link-title--inactive {
+    color: #000000;
+  }
+}
+.link-info {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.link-animation-delay(@counter) when (@counter > 0) {
+  .link-animation-delay((@counter - 1));    // next iteration
+  &:nth-child(@{counter}) {
+    animation-delay: (0.4s + 0.1s * @counter);
+  }
+}
+@keyframes linkSlideIn {
+  0% {opacity: 0; transform: translate(0, 0) scale(0.9);}
+  100% {opacity: 1; transform: translate(0, 0) scale(1);}
+}

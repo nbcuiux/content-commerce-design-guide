@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Content Commerce</title>
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	//= ../template/css.html
+	<script>
+		document.documentElement.className = 'js';
+	</script>
+</head>
+<body class="demo-4">
+	<nav>
+		<button class="hamburger-button qp-ui" data-qp-ui="{ 'SideNavToggle': {} }" role="tab"><i class="material-icons material-spec-icon" title="Show navigation">menu</i></button>
+	</nav>
+	//= ../template/menu.html
+
+	<svg class="hidden">
+		<defs>
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z" />
+				<path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z" />
+			</symbol>
+		</defs>
+	</svg>
+	<main>
+		<!-- Initial markup -->
+		<div class="segmenter" style="background-image: url('../imgs/introduction/bg-6.jpg'); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;"></div>
+		<h2 class="trigger-headline trigger-headline--hidden">
+		      <span><img src="../imgs/icons/nbc-peacock.svg" style="width: 4vw;"></img></span>
+			<span>C</span>
+			<span>O</span>
+			<span>N</span>
+			<span>T</span>
+			<span>E</span>
+			<span>N</span>
+			<span>T</span>
+			<span> </span>
+			<span>C</span>
+			<span>o</span>
+			<span>m</span>
+			<span>m</span>
+			<span>e</span>
+			<span>r</span>
+			<span>c</span>
+			<span>e</span>
+		</h2>
+		<!-- <div class="splash-links splash-links--hidden">
+			<a href="../discovery/index.html" class="splash-link__item">
+				<div class="splash-link__inner">
+					<img src="../imgs/icons/comp.svg">
+					<div class="splash-link__caption">Competitive Analysis</div>
+				</div>
+			</a>
+			<a href="../requirements/index.html" class="splash-link__item">
+				<div class="splash-link__inner">
+					<img src="../imgs/icons/layout.svg">
+					<div class="splash-link__caption">Layout Exploration</div>
+				</div>
+			</a>
+			<a href="../wireframes/index.html" class="splash-link__item">
+				<div class="splash-link__inner">
+					<img src="../imgs/icons/stars.svg">
+					<div class="splash-link__caption">Recommendation Study</div>
+				</div>
+			</a>
+		</div> -->
+	</main>
+	//= ../template/js.html
+	<script src="../js/anime.min.js"></script>
+	<script src="../js/imagesloaded.pkgd.min.js"></script>
+	<script src="../js/main.js"></script>
+	<script>
+		(function() {
+			var headline = document.querySelector('.trigger-headline'),
+			links = document.querySelector('.splash-links'),
+			trigger = document.querySelector('.btn--trigger'),
+			segmenter = new Segmenter(document.querySelector('.segmenter'), {
+				pieces: 10,
+				animation: {
+					duration: 1400,
+					easing: 'easeOutQuad',
+					delay: 50,
+					translateZ: {min: 9, max: 60}
+				},
+				parallax: true,
+				parallaxMovement: {min: 6, max: 12},
+				positions: [
+					{top: 6, left: 12, width: 9, height: 30},
+					{top: 25, left: 6, width: 12, height: 25},
+					{top: 48, left: 12, width: 10, height: 13},
+					{top: 60, left: 6, width: 12, height: 18},
+					{top: 70, left: 24, width: 18, height: 12},
+					{top: 18, left: 67, width: 10, height: 28},
+					{top: 9, left: 72, width: 18, height: 12},
+					{top: 6, left: 60, width: 8, height: 24},
+					{top: 60, left: 85, width: 12, height: 24},
+					{top: 40, left: 90, width: 10, height: 20}
+				],
+				onReady: function() {
+					segmenter.animate();
+					headline.classList.remove('trigger-headline--hidden');
+					links.classList.remove('splash-links--hidden');
+
+				}
+			});
+		})();
+	</script>
+</body>
+</html>

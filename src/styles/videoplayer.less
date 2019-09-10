@@ -1,0 +1,280 @@
+@color-bg: #000000;
+@color-fg: #ffffff;
+
+.video-js {
+  font-size: 10px;
+  color: #fff;
+}
+
+.vjs-default-skin .vjs-big-play-button {
+    background-color: fade(@color-fg, 60%);
+    color: fade(@color-bg, 50%);
+    font-size: 48px;
+    line-height: 1.5;
+    height: 72px;
+    width: 72px;
+    border: none;
+    border-radius: 40px;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    transform: translate(50%, 0%);
+    transition: 0.3s ease-out;
+}
+
+.video-js.vjs-default-skin:hover .vjs-big-play-button {
+    background-color: fade(@color-fg, 72%);
+    transition: 0.3s ease-out;
+}
+
+.video-js button {
+    &.vjs-big-play-button {
+        &:hover {
+        }
+    }
+    &.vjs-button:hover , &.vjs-button:hover:before {
+        text-shadow: none;
+        color: @color-fg;
+    }
+}
+
+.video-js .vjs-control:before {
+    font-size: 19px;
+}
+
+.video-js .vjs-progress-holder .vjs-load-progress div {
+    height: 2px;
+}
+
+.video-js {
+    .vjs-duration-display,
+    .vjs-time-divider,
+    .vjs-current-time-display,
+    .vjs-remaining-time-display,
+    .vjs-play-progress:after,
+    .vjs-mouse-display:after
+    {
+        font-size: 12px;
+        font-family: 'RobotoDraft';
+        font-weight: 500;
+        letter-spacing: 0.012em;
+    }
+}
+
+
+.video-js {
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        transition: 0.3s ease-out;
+        background: fade(@color-bg, 50%);
+        z-index: 1;
+    }
+
+    &.vjs-has-started {
+        &:before {
+            background: fade(@color-bg, 6%);
+        }
+    }
+
+    &.vjs-has-started {
+        &:hover {
+            &:before {
+                background: fade(@color-bg, 12%);
+            }
+        }
+    }
+
+    .vjs-progress-control:hover {
+        .vjs-mouse-display {
+            // transform: none;
+        }
+        .vjs-play-progress:after,
+        .vjs-mouse-display:after
+        {
+            top: -36px;
+            font-size: 0.72em;
+        }
+        .vjs-mouse-display:after {
+            transform: translate(0, 20%);
+        }
+    }
+}
+
+.video-js .vjs-progress-control .vjs-mouse-display {
+    width: 2px;
+}
+
+.video-js {
+
+}
+
+/* The default color of control backgrounds is mostly black but with a little
+bit of blue so it can still be seen on all-black video frames, which are common. */
+.video-js .vjs-menu-button .vjs-menu-content {
+  background-color: fade(@color-bg, 70%);
+}
+.video-js .vjs-control-bar {
+    z-index: 4;
+    background: fade(@color-bg, 60%); //linear-gradient(fade(@color-bg, 0%), fade(@color-bg, 20%));
+}
+
+
+/* Slider - used for Volume bar and Progress bar */
+.video-js .vjs-volume-level,
+.video-js .vjs-slider {
+    height: 2px;
+    background-color: fade(@color-fg, 20%);
+}
+
+/* The slider bar color is used for the progress bar and the volume bar
+(the first two can be removed after a fix that's coming) */
+
+.video-js .vjs-play-progress,
+.video-js .vjs-slider-bar {
+    height: 2px!important;
+    background: fade(@color-fg, 70%);
+
+    &::before {
+        content: '';
+        width: 2px;
+        height: 12px;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        background-color: #ffffff;
+        box-shadow: 0 0 4px 0 fade(#000000, 30%);
+    }
+}
+.video-js .vjs-volume-level {
+    background-color: fade(@color-fg, 70%);
+    &::before {
+        content: '';
+        width: 2px;
+        height: 12px;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        background-color: #ffffff;
+        box-shadow: 0 0 4px 0 fade(#000000, 30%);
+    }
+}
+.vjs-volume-bar.vjs-slider-bar.vjs-slider.vjs-slider-horizontal {
+    background-color: fade(@color-fg, 20%);
+}
+
+/* The main progress bar also has a bar that shows how much has been loaded. */
+.video-js .vjs-load-progress {
+    height: 2px!important;
+    background-color: fade(@color-fg, 20%);
+}
+
+/* The load progress bar also has internal divs that represent
+smaller disconnected loaded time ranges */
+.video-js .vjs-load-progress div {
+  background-color: fade(@color-fg, 20%);
+}
+
+.vjs-fullscreen-control.vjs-control.vjs-button {
+    // display: none!important;
+}
+
+.vjs-progress-holder.vjs-slider.vjs-slider-horizontal {
+    height: 20px;
+    background-color: transparent;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        background-color: fade(@color-fg, 20%);
+    }
+}
+.video-js .vjs-progress-holder .vjs-play-progress,
+.video-js .vjs-progress-holder .vjs-load-progress {
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.video-js .vjs-progress-control .vjs-mouse-display {
+    background-color: @color-fg;
+    height: 9px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.video-js .vjs-play-progress::before, .video-js .vjs-slider-bar::before {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.video-js .vjs-volume-level::before {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.video-js {
+    .vjs-volume-bar {
+        margin: 1.45em 0.45em;
+    }
+    .vjs-menu-content {
+        overflow: visible;
+    }
+    .vjs-play-control {
+        order: 1;
+    }
+
+    .vjs-current-time {
+        display: block;
+        order: 2;
+        padding: 0 3px 0 9px;
+    }
+
+    .vjs-time-divider {
+        min-width: 0px;
+        line-height: 30px;
+        padding-left: 3px;
+        padding-right: 3px;
+        display: block;
+        order: 3;
+    }
+
+    .vjs-remaining-time {
+        display: none;
+        // order: 4;
+        // padding-left: ~'calc(1em - 8px)';
+        // .vjs-remaining-time-display {
+        //     clip-path: inset(0 0 0 4px);
+        // }
+    }
+
+    .vjs-duration {
+        display: block;
+        padding: 0 18px 0 3px;
+        order: 4;
+    }
+
+    .vjs-progress-control {
+        order: 5;
+    }
+
+    .vjs-volume-menu-button {
+        order: 6;
+    }
+
+    .vjs-fullscreen-control {
+        order: 7;
+    }
+}
+
+.video-js .vjs-menu-button-inline:hover, .video-js .vjs-menu-button-inline:focus, .video-js .vjs-menu-button-inline.vjs-slider-active, .video-js.vjs-no-flex .vjs-menu-button-inline {
+    width: 10em;
+}

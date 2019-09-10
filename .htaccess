@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^ux\-process\.nbcuxlab\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.ux\-process\.nbcuxlab\.com$
+RewriteRule ^/?$ "http\:\/\/ux\-process\.nbcuxlab\.com\/index\.html" [R=301,L]
+

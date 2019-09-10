@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="328px" height="227px" viewBox="0 0 328 227" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>cc-logo2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1581.000000, -153.000000)">
+            <g id="cc-logo2" transform="translate(376.000000, 121.000000)">
+                <g transform="translate(1209.000000, 0.000000)">
+                    <path d="M128.026429,210.403794 C82.6394075,200.365704 50.7600439,118.272633 125.258432,85.3194921 C160.051515,69.9293421 201.990183,97.5411118 209.022668,127.728925 C228.93689,127.728925 233.362939,127.728925 251,127.728925 C248.047903,97.5872388 210.687475,42.1934376 151.755348,41.0248611 C83.2079746,39.6656222 43.6212147,94.3073697 41.1330371,139.707071 C38.6380426,185.231155 71.370706,223.473913 128.026429,210.403794 Z" id="Path-3" stroke="#DD7798" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M125.102589,211.654933 C154.944877,203.891786 163.331274,178.293388 169.309444,168.131664 C188.200257,168.131664 191.272604,168.131664 210,168.131664 C201.582718,211.654933 166.186382,254.36849 105.506408,254.994785 C47.0450816,255.59818 -0.919108531,203.753987 0.0133705406,146.134739 C1.27727027,68.0365223 78.1325461,32.5235425 121.839642,44.1638076" id="Path-4" stroke="#DD7798" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M128,85 C150.776838,95.2424017 164.433232,109.242402 168.969182,127 C181.844918,127 195.188524,127 209,127" id="Path-5" stroke="#DD7798" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M210.547213,168 C226.755462,168 240.239725,168 251,168 C231.433588,251.443709 152.874412,257.038393 134,251.443709" id="Path-6" stroke="#DD7798" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <text id="2" font-family="Lora-Regular, Lora" font-size="110" font-weight="normal" fill="#DD7798">
+                        <tspan x="270" y="111">2</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
